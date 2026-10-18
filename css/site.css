@@ -1,0 +1,33 @@
+/* Shared base styles for every page. Page layout lives inline in each page's markup. */
+:root {
+  /* Primary call-to-action color. Alternates from the design: #8A5FB8, #2E5F92, #1F2B45 */
+  --accent: #C93C34;
+}
+
+body {
+  margin: 0;
+  background: #FFF8F1;
+}
+
+a { color: #1F2B45; }
+a:hover { color: #C93C34; }
+
+img { max-width: 100%; }
+
+:focus-visible {
+  outline: 3px solid #5B9BD5;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+/* The homepage "then → now" collage uses fixed offsets; keep the second photo in frame on phones. */
+@media (max-width: 640px) {
+  .hero-photo-now {
+    left: auto !important;
+    right: 2%;
+    width: 62% !important;
+  }
+}
